@@ -16,9 +16,9 @@ const translations = {
   cart_item: '{{name}} x{{quantity}} - {{total}} {{currency}}',
   cart_total: 'Итого: {{total}} {{currency}}',
   cart_button: 'Корзина ({{count}})',
-  submit_order: 'Отправить заказ',
+  submit_order: 'Отправить',
   close_cart: 'Закрыть',
-  clear_cart: 'Очистить корзину',
+  clear_cart: 'Очистить',
   success_message: 'Заказ успешно отправлен',
   error_validation: 'Выберите стол и хотя бы одно блюдо',
   error_telegram: 'Ошибка отправки заказа. Попробуйте позже'
