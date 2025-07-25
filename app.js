@@ -170,8 +170,8 @@ function App() {
     const telegramMessage = `<b>🔔 Новый заказ:</b>\n📍 Стол: ${table}\n🍽️ Блюда:\n${items}\n💰 Итого: ${total} ${translations.currency}\n⌛ Дата: ${new Date().toLocaleString('ru-RU')}`;
 
     try {
-      const response = await axios.post('https://api.telegram.org/bot7272677856:AAGeXk1TFE5pR_ZUAl4DM4lMAYEtHId6MBU/sendMessage', {
-        chat_id: '-1002811012683',
+      const response = await axios.post('https://api.telegram.org/bot7895659834:AAHMHdjQgVt5oeEiVDdjiawznS0QPqRpbjE/sendMessage', {
+        chat_id: '-4816649070',
         text: telegramMessage,
         parse_mode: 'HTML'
       });
@@ -199,7 +199,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <div className="logo">Улес кәуапхана</div>
+        <div className="logo">Улес кәуап орталығы</div>
         <div className="shoppingCart" onClick={() => setIsCartOpen(true)}>
           <span className="cart">🛒</span>
           <div className={cartCount > 0 ? 'cart_content' : 'cart_content noCartItem'}>
