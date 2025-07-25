@@ -2,6 +2,7 @@ const translations = {
   title: '',
   category_all: 'Все',
   category_buger01: 'Шашлыки',
+  category_buger02: 'Горячое',
   category_pizza01: 'Салаты',
   category_hotdog01: 'Десерты',
   category_drink01: 'Напитки',
@@ -21,12 +22,16 @@ const translations = {
   clear_cart: 'Очистить',
   success_message: 'Заказ успешно отправлен',
   error_validation: 'Выберите стол и хотя бы одно блюдо',
-  error_telegram: 'Ошибка отправки заказа. Попробуйте позже'
+  error_telegram: 'Ошибка отправки заказа. Попробуйте позже',
+  service_fee_info: {
+    ru: 'Плата за обслуживание: 5% от суммы заказа',
+    kz: 'Қызмет ақысы: тапсырыс сомасының 5%'
+  }
 };
 
 const MenuItems = [
   { id: 1, itemId: 'buger01', name: 'Шашлыки' },
-  { id: 2, itemId: 'buger02', name: 'Горячое ' },
+  { id: 2, itemId: 'buger02', name: 'Горячое' },
   { id: 3, itemId: 'pizza01', name: 'Салаты' },
   { id: 4, itemId: 'hotdog01', name: 'Десерты' },
   { id: 5, itemId: 'drink01', name: 'Напитки' },
@@ -65,7 +70,7 @@ const Items = [
   { id: 31, itemId: 'drink01', name: 'Пико Палпи', price: '700', imgSrc: 'https://firebasestorage.googleapis.com/v0/b/ules-e5ea3.appspot.com/o/%D1%81%D0%BE%D0%BA%2F%D0%BF%D0%B0%D0%BB%D0%BF%D0%B8.png?alt=media&token=81437225-1de3-4bc0-86e0-28d27e360fde' },
   { id: 29, itemId: 'drink01', name: 'Пико Морс', price: '700', imgSrc: 'https://firebasestorage.googleapis.com/v0/b/ules-e5ea3.appspot.com/o/%D1%81%D0%BE%D0%BA%2F%D0%9F%D0%98%D0%9A%D0%9E%20%D0%9C%D0%9E%D0%A0%D0%A1.png?alt=media&token=56383bca-f541-40a4-986f-355f1019c0df' },
   { id: 30, itemId: 'drink01', name: 'Пико Апельсин', price: '700', imgSrc: 'https://firebasestorage.googleapis.com/v0/b/ules-e5ea3.appspot.com/o/%D1%81%D0%BE%D0%BA%2F%D0%9F%D0%98%D0%9A%D0%9E%20%D0%90%D0%9F%D0%95%D0%9B%D0%AC%D0%A1%D0%98%D0%9D.png?alt=media&token=5b37b38b-dc8d-4dc4-b70a-cdd9d4c9efd1' },
-  { id: 32, itemId: 'drink01', name: 'Пико Мульти', price: '700', imgSrc: 'https://firebasestorage.googleapis.com/v0/b/ules-e5ea3.appspot.com/o/%D1%81%D0%BE%D0%BA%2F%D0%9F%D0%98%D0%9A%D0%9E%20%D0%9C%D0%A3%D0%9B%D0%AC%D0%A2%D0%98.png?alt=media&token=43fad5dd-20ff-4b8b-8dd9-4e5818e297bb' },
+  { id: 32, itemId: 'drink01', name: 'Пико Мульти', price: '700', imgSrc: 'https://firebasestorage.googleapis.com/v0/b/ules-e5ea3.appspot.com/o/%D1%81%D0%BE%D0%BA%2F%D0%9F%D0%98%D0%9A%D0%9E%20%D0%9C%D0%A3%D0%9B%D0%8C%D0%A2%D0%98.png?alt=media&token=43fad5dd-20ff-4b8b-8dd9-4e5818e297bb' },
   { id: 33, itemId: 'drink01', name: 'Пико Яблоко', price: '700', imgSrc: 'https://firebasestorage.googleapis.com/v0/b/ules-e5ea3.appspot.com/o/%D1%81%D0%BE%D0%BA%2F%D0%BF%D0%B8%D0%BA%D0%BE%20%D1%8F%D0%B1%D0%BB%D0%BE%D0%BA%D0%BE.png?alt=media&token=8f5b52f5-cde8-470f-9b54-b18ccc07e504' },
   { id: 34, itemId: 'drink01', name: 'Сочная Долина Морс', price: '700', imgSrc: 'https://firebasestorage.googleapis.com/v0/b/ules-e5ea3.appspot.com/o/%D1%81%D0%BE%D0%BA%2F%D0%A1%D0%94%20%D0%9C%D0%9E%D0%A0%D0%A1.png?alt=media&token=c79a029c-2ec5-43dc-adaf-2e1d57153e20' },
   { id: 35, itemId: 'drink01', name: 'Сочная Долина Яблоко', price: '700', imgSrc: 'https://firebasestorage.googleapis.com/v0/b/ules-e5ea3.appspot.com/o/%D1%81%D0%BE%D0%BA%2F%D0%A1%D0%94%20%D0%AF%D0%91%D0%9B.png?alt=media&token=cbb0fddd-9024-4980-8588-a097706979b7' },
@@ -79,5 +84,5 @@ const Items = [
   { id: 43, itemId: 'tea02', name: 'Ташкенский', price: '600', imgSrc: 'https://firebasestorage.googleapis.com/v0/b/ules-e5ea3.appspot.com/o/%D1%87%D0%B0%D0%B9%2F%D0%A2%D0%90%D0%A8%D0%9A%D0%95%D0%9D%D0%A2%D0%A1%D0%9A%D0%98%D0%99.png?alt=media&token=c0c12892-6d94-48bb-b0aa-81b076c6135d' },
   { id: 44, itemId: 'tea02', name: 'Черный чай', price: '500', imgSrc: 'https://firebasestorage.googleapis.com/v0/b/ules-e5ea3.appspot.com/o/%D1%87%D0%B0%D0%B9%2F%D0%A7%D0%95%D0%A0%D0%9D%D0%AB%D0%99%D0%A7%D0%90%D0%99.png?alt=media&token=40c8948c-e405-41ed-bdb9-67b6eb9242c1' },
   { id: 45, itemId: 'tea02', name: 'Зеленый чай', price: '500', imgSrc: 'https://firebasestorage.googleapis.com/v0/b/ules-e5ea3.appspot.com/o/%D1%87%D0%B0%D0%B9%2F%D0%97%D0%95%D0%9B%D0%95%D0%9D%D0%AB%D0%99.png?alt=media&token=ec8d42d9-94ce-48ea-ab93-22a630366d27' },
-  { id: 46, itemId: 'tea02', name: 'С молоком', price: '750', imgSrc: 'https://firebasestorage.googleapis.com/v0/b/ules-e5ea3.appspot.com/o/%D1%87%D0%B0%D0%B9%2F%D1%81%D1%83%D1%82.png?alt=media&token=017a2d20-5d12-4f46-b2c6-aad0ba0a6b91' },
+  { id: 46, itemId: 'tea02', name: 'С молоком', price: '750', imgSrc: 'https://firebasestorage.googleapis.com/v0/b/ules-e5ea3.appspot.com/o/%D1%87%D0%B0%D0%B9%2F%D1%81%D1%83%D1%82.png?alt=media&token=017a2d20-5d12-4f46-b2c6-aad0ba0a6b91' }
 ];
